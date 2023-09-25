@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+  <title>Aesop summary</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='dog.png') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <!-- <img src="{{ url_for('static', filename='dog.png') }}" class="icon" /> -->
+  
+  <h3>AI Text-Summary Experiment</h3>
+  <h1>The Hare & the Tortoise</h1>
+
+  <p>Once upon a time, there was a Hare who loved to make fun of the Tortoise for being incredibly slow.</p>
+  
+  <p>One day, with a mocking laugh, the Hare asked, 'Do you ever get anywhere?'</p>
+  
+  <p>The Tortoise, undeterred, replied, 'Yes, indeed, and I get there sooner than you might think. Let's settle this with a race.'</p>
+  
+  <p>Amused by the idea, the Hare agreed to the challenge. A Fox, acting as the judge, marked the distance and started the race.</p>
+  
+  <p>The Hare quickly sprinted ahead and soon disappeared from sight. To emphasize how foolish it was for the Tortoise to compete, the Hare even took a nap by the side of the course.</p>
+  
+  <p>Meanwhile, the Tortoise continued at a slow but steady pace and eventually passed the spot where the Hare was sleeping.</p>
+  
+  <p>When the Hare finally woke up, he realized the Tortoise was near the finish line. The Hare sprinted as fast as he could, but it was too late. The Tortoise had already won the race.</p>
+  
+  <form action="/" method="post">
+    <input type="submit" value="Generate moral" />
+  </form>
+  {% if result %}
+  <div class="result">{{ result }}</div>
+  {% endif %}
+</body>
